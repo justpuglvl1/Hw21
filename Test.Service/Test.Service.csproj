@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Test.DAL\Test.DAL.csproj" />
+    <ProjectReference Include="..\Test.Domain\Test.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

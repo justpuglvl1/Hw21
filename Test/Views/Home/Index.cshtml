@@ -1,0 +1,71 @@
+﻿@*@model Test.Domain.ViewModel.AuthorViewModel*@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div style="padding: 30px;"></div>
+<nav class="nav nav-pills flex-column flex-sm-row">
+    <a class="flex-sm-fill text-sm-center nav-link" asp-controller="Account" asp-action="Login">Вход</a>
+    <a class="flex-sm-fill text-sm-center nav-link" asp-controller="Account" asp-action="Register">Регистрация</a>
+</nav>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+            @if (User.Identity.IsAuthenticated)
+            {
+                <div class="card h-100">
+                    <img src="https://gas-kvas.com/uploads/posts/2023-02/1675435936_gas-kvas-com-p-fonovii-risunok-minimalizm-23.jpg" class="card-img card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Создать юзера</h5>
+                        @*<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>*@
+                    </div>
+                    <div class="card-footer">
+                        <nav class="nav nav-pills flex-column flex-sm-row">
+                            <a class="flex-sm-fill text-sm-center nav-link text-center" asp-controller="Home" asp-action="CreateUser">Создать юзера</a>
+                        </nav>
+                    </div>
+                </div>
+            }
+    </div>
+    <div class="col">
+        <div class="card h-100">
+            <img src="https://klike.net/uploads/posts/2022-11/1668493236_3-32.jpg" class="card-img card-img-top" alt="">
+            <div class="card-body">
+                <h5 class="card-title text-center">Список пользователей</h5>
+                @*<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>*@
+            </div>
+            <div class="card-footer">
+                <nav class="nav nav-pills flex-column flex-sm-row">
+                    <a class="flex-sm-fill text-sm-center nav-link text-center" asp-controller="Note" asp-action="Index">Список пользователей</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+    @*<div class="col">
+        <div class="card h-100">
+            <img src="https://filizduezenli.de/wp-content/uploads/2017/06/04101_minimalmountains_2880x1800.jpg" class="card-img card-img-top" alt="">
+            <div class="card-body">
+                <h5 class="card-title text-center">Посмотреть юзера</h5>
+            </div>
+            <div class="card-footer">
+                <nav class="nav nav-pills flex-column flex-sm-row">
+                    <a class="flex-sm-fill text-sm-center nav-link text-center" asp-controller="Home" asp-action="Get">Посмотреть юзера</a>
+                </nav>
+            </div>
+        </div>
+    </div>*@
+</div>
+
+<style>
+    .card {
+        background-color: gray;
+    }
+</style>
+
+@*<div class="text-center">
+
+    <nav class="nav nav-pills flex-column flex-sm-row">
+        <a class="flex-sm-fill text-sm-center nav-link" asp-controller="Home" asp-action="PrintValue">1</a>
+        <a class="flex-sm-fill text-sm-center nav-link" asp-controller="Home" asp-action="CreateUser">2</a>
+        <a class="flex-sm-fill text-sm-center nav-link" asp-controller="Home" asp-action="Get">3</a>
+    </nav>
+
+</div>*@
